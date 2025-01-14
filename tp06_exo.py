@@ -42,7 +42,7 @@ def traceroute(cible, progressif, fichier_sortie):
             if fichier_sortie:
                 with open(fichier_sortie, "w") as fichier:
                     fichier.write("\n".join(resultats))
-    except Exception as e:
+    except KeyboardInterrupt as e:
         print("Erreur : ", str(e))
 
 def principal():
